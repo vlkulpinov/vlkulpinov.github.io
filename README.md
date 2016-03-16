@@ -1,0 +1,1 @@
+This project is according to Google Summer of Code, OSM
