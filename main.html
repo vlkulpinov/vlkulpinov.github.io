@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+     <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+     <script src="typeahead.js"></script>
+    <title>POI Adding Tool</title>
+  </head>
+  <body>
+    <div class="alert alert-success" id="success-alert" role="alert" hidden>
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      <a href="#" class="alert-link">You successfully added note. Your organization will be added soon</a>
+    </div>
+    <div class="jumbotron">
+        <h2>Add your organization</h2>
+        <p class="lead">Improve your chances to become the best place</p>
+        <div class="container">
+            <!-- <form class="form-find"> -->
+            <div class="form-find">
+                <div>
+                    <input type="text" id="orgName" class="typeahead tt-input" placeholder="Name of organization" required="" autofocus=""/>
+                </div>
+                <br/>
+                <div id="scrollable-dropdown-menu1">
+                    <input type="text" id="orgCategory" class="typeahead tt-input" placeholder="Main category (e.g. cafe)" required="" autofocus=""/>
+                    <pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: '.HelveticaNeueDeskInterface-Regular'; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 300; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre>
+                </div>
+                <!-- <button id="findButton" class="btn btn-lg btn-primary btn-block" type="submit">Find me</button> -->
+            </div>
+            <!-- </form> -->
+        </div>
+    </div>
+
+    <div class="alternative">
+        <h2>Insert address</h2>
+        <div id="scrollable-dropdown-menu2">
+                    <input type="text" id="lineAddress" class="typeahead tt-input" placeholder="Address (e.g. 221B Baker Street, London, United Kingdom)" required="" autofocus=""/>
+                    <pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: '.HelveticaNeueDeskInterface-Regular'; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 300; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre>
+                </div>
+        <h2> Or just put it into the map</h2>
+    </div>
+    <div id="mapid"></div>
+    <br/>
+    <div class="alternative jumbotron">
+        <h3>Some additional tips to create world famous buisiness</h3>
+        <div class="form-find">
+            <label>Telephone number helps your clients find you</label>
+            <input type="text" class="typeahead tt-input" id="telephone" placeholder="Telephone number (e.g. +78005553535)" required="" autofocus=""/>
+            <br/>
+            <input type="text" class="typeahead tt-input" id="website" placeholder="Website (http://openstreetmap.org)" required="" autofocus=""/>
+            <br/> <br/>
+            <button type="button" id="create_note" class="btn btn-large btn-success">Add organization into map</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,8 @@
+{
+    "categories":
+        [
+                {"name": "bar"},
+                {"name": "biergarten"},
+                {"name": "cafe"}
+        ]
+}
